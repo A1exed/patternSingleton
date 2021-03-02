@@ -18,7 +18,7 @@ public class ConfigLogger {
         }
     }
 
-    public static ConfigLogger getInstance() {
+    public synchronized static ConfigLogger getInstance() {
         if (configLogger == null) {
             configLogger = new ConfigLogger();
         }
